@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+        <h2>Submit Payment</h2>
+    <form id="paymentForm" action="process_form.php" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="amount">Payment Amount (USD):</label>
+        <input type="number" id="amount" name="payment_amount" required><br>
+
+        <label for="proofOfPayment">Proof of Payment:</label>
+        <input type="file" id="proofOfPayment" name="proof_of_payment" required><br>
+
+        <button type="button" onclick="createPayment()">Submit Payment</button>
+    </form>
+
+    <!--
+        Developer: 
+        
+        AGIAGE, BRIGHT
+        Email info: agiagebright9@gmail.com
+        Phone info: +2349131383065
+        Feel free to contact me incase of any issues
+        
+     -->
+
+</body>
+</html>
